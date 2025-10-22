@@ -57,10 +57,11 @@
 **Ejemplo:**
 bash
 docker system prune --all --volumes --force
-docker info
-Descripción: Muestra información detallada del sistema Docker instalado.
 
-Opciones disponibles:
+###docker info
+**Descripción:** Muestra información detallada del sistema Docker instalado.
+
+**Opciones disponibles:**
 
 --format: Formatea la salida con plantilla Go
 
