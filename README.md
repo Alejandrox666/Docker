@@ -72,10 +72,11 @@ Ejemplo:
 bash
 docker info
 docker info --format '{{.ServerVersion}}'
-docker ps
-Descripción: Lista contenedores en ejecución.
 
-Opciones disponibles:
+### docker ps
+**Descripción:** Lista contenedores en ejecución.
+
+**Opciones disponibles:**
 
 -a: Muestra todos los contenedores (incluyendo detenidos)
 
@@ -90,10 +91,11 @@ Ejemplo:
 bash
 docker ps -a
 docker ps --filter "status=running"
-docker images
-Descripción: Lista imágenes Docker disponibles localmente.
 
-Opciones disponibles:
+### docker images
+**Descripción:** Lista imágenes Docker disponibles localmente.
+
+**Opciones disponibles:**
 
 -a: Muestra todas las imágenes (incluyendo intermedias)
 
@@ -108,10 +110,11 @@ Ejemplo:
 bash
 docker images
 docker images --filter "dangling=true"
-docker run
-Descripción: Crea y ejecuta un nuevo contenedor a partir de una imagen.
 
-Opciones disponibles:
+### docker run
+**Descripción:** Crea y ejecuta un nuevo contenedor a partir de una imagen.
+
+**Opciones disponibles:**
 
 -d: Ejecuta en segundo plano (detached)
 
@@ -132,10 +135,11 @@ Ejemplo:
 bash
 docker run -d --name mi-contenedor -p 8080:80 nginx
 docker run -it ubuntu:20.04 /bin/bash
-docker stop
-Descripción: Detiene uno o más contenedores en ejecución.
 
-Opciones disponibles:
+### docker stop
+**Descripción:** Detiene uno o más contenedores en ejecución.
+
+**Opciones disponibles:**
 
 -t: Tiempo de espera antes de forzar parada (default 10s)
 
@@ -144,10 +148,11 @@ Ejemplo:
 bash
 docker stop mi-contenedor
 docker stop $(docker ps -q)
-docker start
-Descripción: Inicia uno o más contenedores detenidos.
 
-Opciones disponibles:
+### docker start
+**Descripción:** Inicia uno o más contenedores detenidos.
+
+**Opciones disponibles:**
 
 -a: Adjunta STDOUT/STDERR y reenvía señales
 
@@ -158,10 +163,11 @@ Ejemplo:
 bash
 docker start mi-contenedor
 docker start contenedor1 contenedor2
-docker rm
-Descripción: Elimina uno o más contenedores.
 
-Opciones disponibles:
+### docker rm
+**Descripción:** Elimina uno o más contenedores.
+
+**Opciones disponibles:**
 
 -f: Fuerza eliminación (contenedores en ejecución)
 
@@ -174,10 +180,11 @@ Ejemplo:
 bash
 docker rm mi-contenedor
 docker rm -f $(docker ps -aq)
-docker rmi
-Descripción: Elimina una o más imágenes.
 
-Opciones disponibles:
+### docker rmi
+**Descripción:** Elimina una o más imágenes.
+
+**Opciones disponibles:**
 
 -f: Fuerza eliminación
 
@@ -188,10 +195,11 @@ Ejemplo:
 bash
 docker rmi mi-imagen:latest
 docker rmi $(docker images -q)
-docker build
-Descripción: Construye una imagen desde un Dockerfile.
 
-Opciones disponibles:
+### docker build
+**Descripción:** Construye una imagen desde un Dockerfile.
+
+**Opciones disponibles:**
 
 -t: Etiqueta para la imagen
 
@@ -206,10 +214,11 @@ Ejemplo:
 bash
 docker build -t mi-app:1.0 .
 docker build -t mi-app --build-arg VERSION=1.0 .
-docker pull
-Descripción: Descarga una imagen desde un registro.
 
-Opciones disponibles:
+### docker pull
+**Descripción:** Descarga una imagen desde un registro.
+
+**Opciones disponibles:**
 
 -a: Descarga todas las etiquetas de la imagen
 
@@ -220,10 +229,11 @@ Ejemplo:
 bash
 docker pull nginx:latest
 docker pull ubuntu:20.04
-docker push
-Descripción: Sube una imagen a un registro.
 
-Opciones disponibles:
+### docker push
+**Descripción:** Sube una imagen a un registro.
+
+**Opciones disponibles:**
 
 No tiene opciones principales adicionales
 
@@ -231,10 +241,11 @@ Ejemplo:
 
 bash
 docker push mi-usuario/mi-imagen:1.0
-docker exec
-Descripción: Ejecuta un comando en un contenedor en ejecución.
 
-Opciones disponibles:
+### docker exec
+**Descripción:** Ejecuta un comando en un contenedor en ejecución.
+
+**Opciones disponibles:**
 
 -it: Modo interactivo con terminal
 
@@ -249,10 +260,11 @@ Ejemplo:
 bash
 docker exec -it mi-contenedor /bin/bash
 docker exec mi-contenedor ls -la
-docker logs
-Descripción: Muestra logs de un contenedor.
 
-Opciones disponibles:
+### docker logs
+**Descripción:** Muestra logs de un contenedor.
+
+**Opciones disponibles:**
 
 -f: Sigue mostrando logs en tiempo real
 
@@ -267,10 +279,11 @@ Ejemplo:
 bash
 docker logs mi-contenedor
 docker logs -f --tail=50 mi-contenedor
-docker network
-Descripción: Gestiona redes Docker.
 
-Comandos principales:
+### docker network
+**Descripción:** Gestiona redes Docker.
+
+**Comandos principales:**
 
 docker network ls: Lista redes
 
@@ -288,10 +301,11 @@ bash
 docker network ls
 docker network create mi-red
 docker network connect mi-red mi-contenedor
-docker volume
-Descripción: Gestiona volúmenes Docker.
 
-Comandos principales:
+### docker volume
+**Descripción:** Gestiona volúmenes Docker.
+
+**Comandos principales:**
 
 docker volume ls: Lista volúmenes
 
@@ -309,11 +323,12 @@ bash
 docker volume ls
 docker volume create mi-volumen
 docker volume prune
-Docker Compose
-docker compose up
-Descripción: Crea e inicia servicios definidos en docker-compose.yml.
 
-Opciones disponibles:
+### Docker Compose
+**docker compose up**
+**Descripción:** Crea e inicia servicios definidos en docker-compose.yml.
+
+**Opciones disponibles:**
 
 -d: Ejecuta en segundo plano
 
@@ -328,10 +343,11 @@ Ejemplo:
 bash
 docker compose up -d
 docker compose up --build --scale web=3
-docker compose down
-Descripción: Detiene y elimina contenedores, redes, volúmenes e imágenes creados por up.
 
-Opciones disponibles:
+### docker compose down
+**Descripción:** Detiene y elimina contenedores, redes, volúmenes e imágenes creados por up.
+
+**Opciones disponibles:**
 
 -v: Elimina volúmenes declarados en la sección volumes
 
@@ -344,10 +360,11 @@ Ejemplo:
 bash
 docker compose down
 docker compose down -v --remove-orphans
-docker compose build
-Descripción: Construye o reconstruye servicios.
 
-Opciones disponibles:
+### docker compose build
+**Descripción:** Construye o reconstruye servicios.
+
+**Opciones disponibles:**
 
 --no-cache: Construye imágenes sin usar cache
 
@@ -358,8 +375,9 @@ Ejemplo:
 bash
 docker compose build
 docker compose build --no-cache --pull
-docker compose logs
-Descripción: Muestra logs de los servicios.
+
+### docker compose logs
+**Descripción:** Muestra logs de los servicios.
 
 Opciones disponibles:
 
@@ -376,10 +394,11 @@ Ejemplo:
 bash
 docker compose logs
 docker compose logs -f --tail=100 web
-docker compose ps
-Descripción: Lista contenedores de los servicios.
 
-Opciones disponibles:
+### docker compose ps
+**Descripción:** Lista contenedores de los servicios.
+
+**Opciones disponibles:**
 
 -a: Muestra todos los contenedores
 
@@ -392,10 +411,11 @@ Ejemplo:
 bash
 docker compose ps
 docker compose ps --services
-docker compose restart
-Descripción: Reinicia servicios.
 
-Opciones disponibles:
+### docker compose restart
+**Descripción:** Reinicia servicios.
+
+**Opciones disponibles:**
 
 -t: Tiempo de espera para reinicio
 
@@ -404,11 +424,12 @@ Ejemplo:
 bash
 docker compose restart
 docker compose restart web database
-Docker Swarm
-docker swarm init
-Descripción: Inicializa un swarm y hace al nodo actual manager.
 
-Opciones disponibles:
+## Docker Swarm
+### docker swarm init
+**Descripción:** Inicializa un swarm y hace al nodo actual manager.
+
+**Opciones disponibles:**
 
 --advertise-addr: Dirección para que otros nodos se conecten
 
@@ -421,10 +442,11 @@ Ejemplo:
 bash
 docker swarm init --advertise-addr 192.168.1.100
 sudo docker swarm init --advertise-addr $(hostname -I | awk '{print $1}')
-docker swarm join
-Descripción: Une un nodo al swarm como worker o manager.
 
-Opciones disponibles:
+### docker swarm join
+**Descripción:** Une un nodo al swarm como worker o manager.
+
+**Opciones disponibles:**
 
 --token: Token para unirse al swarm
 
@@ -436,10 +458,11 @@ Ejemplo:
 
 bash
 docker swarm join --token SWMTKN-1-example 192.168.1.100:2377
-docker swarm leave
-Descripción: Hace que el nodo abandone el swarm.
 
-Opciones disponibles:
+### docker swarm leave
+**Descripción:** Hace que el nodo abandone el swarm.
+
+**Opciones disponibles:**
 
 --force: Fuerza abandono incluso si es manager
 
@@ -448,10 +471,11 @@ Ejemplo:
 bash
 docker swarm leave
 docker swarm leave --force
-docker node ls
-Descripción: Lista nodos en el swarm.
 
-Opciones disponibles:
+### docker node ls
+**Descripción:** Lista nodos en el swarm.
+
+**Opciones disponibles:**
 
 -q: Muestra solo IDs de nodos
 
@@ -462,10 +486,11 @@ Ejemplo:
 bash
 docker node ls
 docker node ls --filter role=manager
-docker service ls
-Descripción: Lista servicios en el swarm.
 
-Opciones disponibles:
+### docker service ls
+**Descripción:** Lista servicios en el swarm.
+
+**Opciones disponibles:**
 
 -q: Muestra solo IDs de servicios
 
@@ -476,10 +501,11 @@ Ejemplo:
 bash
 docker service ls
 docker service ls --filter name=web
-docker service create
-Descripción: Crea un nuevo servicio.
 
-Opciones disponibles:
+### docker service create
+**Descripción:** Crea un nuevo servicio.
+
+**Opciones disponibles:**
 
 --replicas: Número de réplicas del servicio
 
@@ -497,10 +523,11 @@ Ejemplo:
 
 bash
 docker service create --name web --replicas 3 -p 80:80 nginx
-docker service scale
-Descripción: Escala el número de réplicas de un servicio.
 
-Opciones disponibles:
+### docker service scale
+**Descripción:** Escala el número de réplicas de un servicio.
+
+**Opciones disponibles:**
 
 servicio=num: Especifica servicio y número de réplicas
 
@@ -509,10 +536,11 @@ Ejemplo:
 bash
 docker service scale web=5
 docker service scale web=3 api=2
-docker stack deploy
-Descripción: Despliega una nueva stack o actualiza una existente.
 
-Opciones disponibles:
+### docker stack deploy
+**Descripción:** Despliega una nueva stack o actualiza una existente.
+
+**Opciones disponibles:**
 
 -c o --compose-file: Archivo compose a usar
 
@@ -525,10 +553,11 @@ Ejemplo:
 bash
 docker stack deploy -c docker-compose.yml mi-stack
 sudo docker stack deploy -c swarm.yml billing
-docker stack ls
-Descripción: Lista stacks en el swarm.
 
-Opciones disponibles:
+### docker stack ls
+**Descripción:** Lista stacks en el swarm.
+
+**Opciones disponibles:**
 
 No tiene opciones principales adicionales
 
@@ -536,10 +565,11 @@ Ejemplo:
 
 bash
 docker stack ls
-docker stack rm
-Descripción: Elimina una stack del swarm.
 
-Opciones disponibles:
+### docker stack rm
+**Descripción:** Elimina una stack del swarm.
+
+**Opciones disponibles:**
 
 No tiene opciones principales adicionales
 
