@@ -55,7 +55,7 @@
 - `--filter`: Filtra qué eliminar usando condiciones
 
 **Ejemplo:**
-```bash
+bash
 docker system prune --all --volumes --force
 docker info
 Descripción: Muestra información detallada del sistema Docker instalado.
