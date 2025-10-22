@@ -58,7 +58,7 @@
 bash
 docker system prune --all --volumes --force
 
-###docker info
+### docker info
 **Descripción:** Muestra información detallada del sistema Docker instalado.
 
 **Opciones disponibles:**
