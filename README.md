@@ -235,7 +235,7 @@ docker pull ubuntu:20.04
 
 **Opciones disponibles:**
 
-No tiene opciones principales adicionales
+- No tiene opciones principales adicionales
 
 Ejemplo:
 
