@@ -97,13 +97,13 @@ docker ps --filter "status=running"
 
 **Opciones disponibles:**
 
--a: Muestra todas las imágenes (incluyendo intermedias)
+- `-a`: Muestra todas las imágenes (incluyendo intermedias)
 
--q: Muestra solo IDs de imágenes
+- `-q`: Muestra solo IDs de imágenes
 
---filter: Filtra imágenes por condiciones
+- `--filter`: Filtra imágenes por condiciones
 
---no-trunc: Muestra IDs completos
+- `--no-trunc`: Muestra IDs completos
 
 Ejemplo:
 
@@ -116,19 +116,19 @@ docker images --filter "dangling=true"
 
 **Opciones disponibles:**
 
--d: Ejecuta en segundo plano (detached)
+- `-d`: Ejecuta en segundo plano (detached)
 
--it: Modo interactivo con terminal
+- `-it`: Modo interactivo con terminal
 
---name: Asigna nombre al contenedor
+- `--name`: Asigna nombre al contenedor
 
--p: Mapea puertos (host:container)
+- `-p`: Mapea puertos (host:container)
 
--v: Monta volúmenes
+- `-v`: Monta volúmenes
 
---network: Conecta a una red específica
+- `--network`: Conecta a una red específica
 
--e: Define variables de entorno
+- `-e`: Define variables de entorno
 
 Ejemplo:
 
@@ -141,7 +141,7 @@ docker run -it ubuntu:20.04 /bin/bash
 
 **Opciones disponibles:**
 
--t: Tiempo de espera antes de forzar parada (default 10s)
+- `-t`: Tiempo de espera antes de forzar parada (default 10s)
 
 Ejemplo:
 
@@ -154,9 +154,9 @@ docker stop $(docker ps -q)
 
 **Opciones disponibles:**
 
--a: Adjunta STDOUT/STDERR y reenvía señales
+- `-a`: Adjunta STDOUT/STDERR y reenvía señales
 
--i: Adjunta la entrada estándar del contenedor
+- `-i`: Adjunta la entrada estándar del contenedor
 
 Ejemplo:
 
@@ -169,11 +169,11 @@ docker start contenedor1 contenedor2
 
 **Opciones disponibles:**
 
--f: Fuerza eliminación (contenedores en ejecución)
+- `-f`: Fuerza eliminación (contenedores en ejecución)
 
--v: Elimina volúmenes asociados
+- `-v`: Elimina volúmenes asociados
 
--l: Elimina enlaces específicos
+- `-l`: Elimina enlaces específicos
 
 Ejemplo:
 
@@ -186,9 +186,9 @@ docker rm -f $(docker ps -aq)
 
 **Opciones disponibles:**
 
--f: Fuerza eliminación
+- `-f`: Fuerza eliminación
 
---no-prune: No elimina etiquetas no referenciadas
+- `--no-prune`: No elimina etiquetas no referenciadas
 
 Ejemplo:
 
@@ -201,13 +201,13 @@ docker rmi $(docker images -q)
 
 **Opciones disponibles:**
 
--t: Etiqueta para la imagen
+- `-t`: Etiqueta para la imagen
 
---file: Especifica Dockerfile a usar
+- `--file`: Especifica Dockerfile a usar
 
---build-arg: Define variables de construcción
+- `--build-arg`: Define variables de construcción
 
---no-cache: Construye sin usar cache
+- `--no-cache`: Construye sin usar cache
 
 Ejemplo:
 
@@ -220,9 +220,9 @@ docker build -t mi-app --build-arg VERSION=1.0 .
 
 **Opciones disponibles:**
 
--a: Descarga todas las etiquetas de la imagen
+- `-a`: Descarga todas las etiquetas de la imagen
 
---platform: Especifica plataforma objetivo
+- `--platform`: Especifica plataforma objetivo
 
 Ejemplo:
 
@@ -247,13 +247,13 @@ docker push mi-usuario/mi-imagen:1.0
 
 **Opciones disponibles:**
 
--it: Modo interactivo con terminal
+- `-it`: Modo interactivo con terminal
 
--d: Ejecuta en segundo plano
+- `-d`: Ejecuta en segundo plano
 
--u: Usuario específico para ejecutar
+- `-u`: Usuario específico para ejecutar
 
--w: Directorio de trabajo
+- `-w`: Directorio de trabajo
 
 Ejemplo:
 
@@ -266,13 +266,13 @@ docker exec mi-contenedor ls -la
 
 **Opciones disponibles:**
 
--f: Sigue mostrando logs en tiempo real
+- `-f`: Sigue mostrando logs en tiempo real
 
---tail: Número de líneas a mostrar desde el final
+- `--tail`: Número de líneas a mostrar desde el final
 
--t: Muestra timestamps
+- `-t`: Muestra timestamps
 
---since: Muestra logs desde timestamp específico
+- `--since`: Muestra logs desde timestamp específico
 
 Ejemplo:
 
@@ -285,15 +285,15 @@ docker logs -f --tail=50 mi-contenedor
 
 **Comandos principales:**
 
-docker network ls: Lista redes
+- `docker network ls: Lista redes`
 
-docker network create: Crea nueva red
+- `docker network create: Crea nueva red`
 
-docker network inspect: Inspecciona red
+- `docker network inspect: Inspecciona red`
 
-docker network connect: Conecta contenedor a red
+- `docker network connect: Conecta contenedor a red`
 
-docker network disconnect: Desconecta contenedor de red
+- `docker network disconnect: Desconecta contenedor de red`
 
 Ejemplo:
 
@@ -307,15 +307,15 @@ docker network connect mi-red mi-contenedor
 
 **Comandos principales:**
 
-docker volume ls: Lista volúmenes
+- `docker volume ls: Lista volúmenes`
 
-docker volume create: Crea nuevo volumen
+- `docker volume create: Crea nuevo volumen`
 
-docker volume inspect: Inspecciona volumen
+- `docker volume inspect: Inspecciona volumen`
 
-docker volume rm: Elimina volumen
+- `docker volume rm: Elimina volumen`
 
-docker volume prune: Elimina volúmenes no utilizados
+- `docker volume prune: Elimina volúmenes no utilizados`
 
 Ejemplo:
 
@@ -330,13 +330,13 @@ docker volume prune
 
 **Opciones disponibles:**
 
--d: Ejecuta en segundo plano
+- `-d`: Ejecuta en segundo plano
 
---build: Reconstruye imágenes antes de iniciar
+- `--build`: Reconstruye imágenes antes de iniciar
 
---force-recreate: Recrea contenedores incluso sin cambios
+- `--force-recreate`: Recrea contenedores incluso sin cambios
 
---scale: Escala servicios específicos
+- `--scale`: Escala servicios específicos
 
 Ejemplo:
 
@@ -349,11 +349,11 @@ docker compose up --build --scale web=3
 
 **Opciones disponibles:**
 
--v: Elimina volúmenes declarados en la sección volumes
+- `-v`: Elimina volúmenes declarados en la sección volumes
 
---rmi: Elimina imágenes usadas por los servicios
+- `--rmi`: Elimina imágenes usadas por los servicios
 
---remove-orphans: Elimina contenedores huérfanos
+- `--remove-orphans`: Elimina contenedores huérfanos
 
 Ejemplo:
 
@@ -366,9 +366,9 @@ docker compose down -v --remove-orphans
 
 **Opciones disponibles:**
 
---no-cache: Construye imágenes sin usar cache
+- `--no-cache`: Construye imágenes sin usar cache
 
---pull: Siempre intenta obtener versión más reciente de la imagen
+- `--pull`: Siempre intenta obtener versión más reciente de la imagen
 
 Ejemplo:
 
@@ -381,11 +381,11 @@ docker compose build --no-cache --pull
 
 Opciones disponibles:
 
--f: Sigue mostrando logs
+- `-f`: Sigue mostrando logs
 
---tail: Número de líneas a mostrar
+- `--tail`: Número de líneas a mostrar
 
--t: Muestra timestamps
+- `-t`: Muestra timestamps
 
 servicio: Filtra por servicio específico
 
@@ -400,11 +400,11 @@ docker compose logs -f --tail=100 web
 
 **Opciones disponibles:**
 
--a: Muestra todos los contenedores
+- `-a`: Muestra todos los contenedores
 
---services: Muestra servicios
+- `--services`: Muestra servicios
 
---filter: Filtra por condiciones
+- `--filter`: Filtra por condiciones
 
 Ejemplo:
 
@@ -417,7 +417,7 @@ docker compose ps --services
 
 **Opciones disponibles:**
 
--t: Tiempo de espera para reinicio
+- `-t`: Tiempo de espera para reinicio
 
 Ejemplo:
 
@@ -431,11 +431,11 @@ docker compose restart web database
 
 **Opciones disponibles:**
 
---advertise-addr: Dirección para que otros nodos se conecten
+- `--advertise-addr`: Dirección para que otros nodos se conecten
 
---listen-addr: Dirección para escuchar conexiones
+- `--listen-addr`: Dirección para escuchar conexiones
 
---data-path-addr: Dirección para datos del swarm
+- `--data-path-addr`: Dirección para datos del swarm
 
 Ejemplo:
 
@@ -448,11 +448,11 @@ sudo docker swarm init --advertise-addr $(hostname -I | awk '{print $1}')
 
 **Opciones disponibles:**
 
---token: Token para unirse al swarm
+- `--token`: Token para unirse al swarm
 
---advertise-addr: Dirección para anunciar el nodo
+- `--advertise-addr`: Dirección para anunciar el nodo
 
---listen-addr: Dirección para escuchar
+- `--listen-addr`: Dirección para escuchar
 
 Ejemplo:
 
@@ -464,7 +464,7 @@ docker swarm join --token SWMTKN-1-example 192.168.1.100:2377
 
 **Opciones disponibles:**
 
---force: Fuerza abandono incluso si es manager
+- `--force`: Fuerza abandono incluso si es manager
 
 Ejemplo:
 
@@ -477,9 +477,9 @@ docker swarm leave --force
 
 **Opciones disponibles:**
 
--q: Muestra solo IDs de nodos
+- `-q`: Muestra solo IDs de nodos
 
---filter: Filtra nodos por condiciones
+- `--filter`: Filtra nodos por condiciones
 
 Ejemplo:
 
@@ -492,9 +492,9 @@ docker node ls --filter role=manager
 
 **Opciones disponibles:**
 
--q: Muestra solo IDs de servicios
+- `-q`: Muestra solo IDs de servicios
 
---filter: Filtra servicios por condiciones
+- `--filter`: Filtra servicios por condiciones
 
 Ejemplo:
 
@@ -507,17 +507,17 @@ docker service ls --filter name=web
 
 **Opciones disponibles:**
 
---replicas: Número de réplicas del servicio
+- `--replicas`: Número de réplicas del servicio
 
---publish: Publica puertos
+- `--publish`: Publica puertos
 
---mount: Monta volúmenes o bind mounts
+- `--mount`: Monta volúmenes o bind mounts
 
---network: Conecta a una red
+- `--network`: Conecta a una red
 
---env: Define variables de entorno
+- `--env`: Define variables de entorno
 
---constraint: Define restricciones de colocación
+- `--constraint`: Define restricciones de colocación
 
 Ejemplo:
 
@@ -529,7 +529,7 @@ docker service create --name web --replicas 3 -p 80:80 nginx
 
 **Opciones disponibles:**
 
-servicio=num: Especifica servicio y número de réplicas
+- `servicio=num`: Especifica servicio y número de réplicas
 
 Ejemplo:
 
@@ -542,11 +542,11 @@ docker service scale web=3 api=2
 
 **Opciones disponibles:**
 
--c o --compose-file: Archivo compose a usar
+- `-c o --compose-file:` Archivo compose a usar
 
---with-registry-auth: Envía credenciales de registro
+- `--with-registry-auth`: Envía credenciales de registro
 
---prune: Elimina servicios que ya no están en el compose
+- `--prune`: Elimina servicios que ya no están en el compose
 
 Ejemplo:
 
@@ -559,7 +559,7 @@ sudo docker stack deploy -c swarm.yml billing
 
 **Opciones disponibles:**
 
-No tiene opciones principales adicionales
+- No tiene opciones principales adicionales
 
 Ejemplo:
 
@@ -571,7 +571,7 @@ docker stack ls
 
 **Opciones disponibles:**
 
-No tiene opciones principales adicionales
+- No tiene opciones principales adicionales
 
 Ejemplo:
 
