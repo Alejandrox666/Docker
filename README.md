@@ -63,9 +63,9 @@ docker system prune --all --volumes --force
 
 **Opciones disponibles:**
 
---format: Formatea la salida con plantilla Go
+- `--format`: Formatea la salida con plantilla Go
 
--f: Formato específico de salida
+- `--f`: Formato específico de salida
 
 Ejemplo:
 
@@ -78,13 +78,13 @@ docker info --format '{{.ServerVersion}}'
 
 **Opciones disponibles:**
 
--a: Muestra todos los contenedores (incluyendo detenidos)
+- `-a`: Muestra todos los contenedores (incluyendo detenidos)
 
--q: Muestra solo IDs de contenedores
+- `-q`: Muestra solo IDs de contenedores
 
---filter: Filtra contenedores por condiciones
+- `--filter`: Filtra contenedores por condiciones
 
---format: Formatea la salida
+- `--format`: Formatea la salida
 
 Ejemplo:
 
